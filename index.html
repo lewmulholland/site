@@ -9,106 +9,122 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Base Styles */
-    body {
-      margin:0;
-      font-family: 'Lora', serif;
-      background-color:#1a1a1a;
-      color:#e0e0e0;
-      line-height:1.6;
-    }
-    h1, h2, h3 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight:700;
-      text-transform: uppercase;
-    }
-    section {
-      padding:80px 20px;
-    }
-    a {
-      color:#ff7043;
-      text-decoration:none;
-    }
-    a:hover {
-      color:#ff9366;
-      text-decoration:underline;
-    }
+  /* Base Styles */
+  body {
+    margin:0;
+    font-family: 'Lora', serif;
+    background-color:#1a1a1a;
+    color:#e0e0e0;
+    line-height:1.6;
+  }
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:700;
+    text-transform: uppercase;
+  }
+  section {
+    padding:80px 20px;
+  }
+  a {
+    color:#ff7043;
+    text-decoration:none;
+  }
+  a:hover {
+    color:#ff9366;
+    text-decoration:underline;
+  }
 
-    /* Grid Layout for Film Cards */
-    .grid-container {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-      gap:30px;
-      max-width:1200px;
-      margin:0 auto;
-    }
+  /* Grid Layout for Film Cards */
+  .grid-container {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:0 auto;
+  }
 
-    .film-card {
-      background:#f5f5f5;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:0 6px 15px rgba(0,0,0,0.5);
-      transition: transform 0.3s, box-shadow 0.3s;
-      opacity:0;
-      transform:translateY(30px);
-      color:#000;
-    }
+  .film-card {
+    background:#f5f5f5;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity:0;
+    transform:translateY(30px);
+    color:#000;
+  }
 
-    .film-card.visible {
-      opacity:1;
-      transform:translateY(0);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
+  .film-card.visible {
+    opacity:1;
+    transform:translateY(0);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
 
-    .film-card:hover {
-      transform: translateY(-5px);
-      box-shadow:0 10px 20px rgba(0,0,0,0.6);
-    }
+  .film-card:hover {
+    transform: translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.6);
+  }
 
-    .film-card img {
-      width:100%;
-      height:200px;
-      object-fit:cover;
-      display:block;
-    }
+  .film-card img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+  }
 
-    .film-card .content {
-      padding:20px;
-      text-align:left;
-    }
+  .film-card .content {
+    padding:20px;
+    text-align:left;
+  }
 
-    .film-card h3 {
-      font-size:1.5rem;
-      margin-bottom:10px;
-    }
+  .film-card h3 {
+    font-size:1.5rem;
+    margin-bottom:10px;
+  }
 
-    .film-card p {
-      color:#333;
-      font-size:0.95rem;
-      margin-bottom:10px;
-    }
+  .film-card p {
+    color:#333;
+    font-size:0.95rem;
+    margin-bottom:10px;
+  }
 
-    .film-card a.button {
-      display:inline-block;
-      background:#ff7043;
-      color:#000;
-      padding:8px 12px;
-      border-radius:8px;
-      font-weight:bold;
-      text-decoration:none;
-    }
+  .film-card a.button {
+    display:inline-block;
+    background:#ff7043;
+    color:#000;
+    padding:8px 12px;
+    border-radius:8px;
+    font-weight:bold;
+    text-decoration:none;
+  }
 
-    .film-card a.button:hover {
-      background:#ff9366;
-    }
+  .film-card a.button:hover {
+    background:#ff9366;
+  }
 
-    footer {
-      text-align:center;
-      padding:40px 20px;
-      border-top:1px solid #333;
-      color:#aaa;
-    }
-  </style>
+  /* Bio Email Button */
+  .bio-button {
+    display: inline-block;
+    background: #ff7043;
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .bio-button:hover {
+    background: #ff9366;
+  }
+
+  footer {
+    text-align:center;
+    padding:40px 20px;
+    border-top:1px solid #333;
+    color:#aaa;
+  }
+</style>
 </head>
 <body>
 
@@ -131,7 +147,7 @@
       <p>Lewis writes comedy and drama. His work often features toxic men because he hopes that laughing at ourselves can build a better society.</p>
       <p>When he's not writing, Lewis is in the gym practicing his free throws. Lewis is represented for writing and acting, in Australia, by <strong>Kubler Auckland Management</strong>.</p>
       <p style="margin-top:20px;">
-        <a href="mailto:lewis.mulholland@gmail.com" class="button">Send him an email</a>
+        <a <a href="mailto:lewis.mulholland@gmail.com" class="bio-button">Send him an email</a>
       </p>
     </div>
 
